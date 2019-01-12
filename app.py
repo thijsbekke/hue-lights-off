@@ -1,10 +1,11 @@
 import hue
 import yaml
 import logging
+import sys
 
 class App:
 	def __init__(self):
-		with open("settings.yml", 'r') as ymlfile:
+		with open('{}/settings.yml'.format(sys.path[0]), 'r') as ymlfile:
 			settings = yaml.load(ymlfile)
 
 			logging.debug(settings)
