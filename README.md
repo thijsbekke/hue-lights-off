@@ -6,7 +6,28 @@ Well I had that "problem" to, that is why I created this simple Python script. W
 
 ## Settings.yml
 
-Meaybe this step can be automated but for now, open settings.yml and enter your username and ip of your bridge. see [https://developers.meethue.com](https://developers.meethue.com/develop/get-started-2/) on how to obtain those. You also need to specify which light to turn off
+Meaybe this step can be automated but for now, open settings.yml and enter your username and ip of your bridge. see [https://developers.meethue.com](https://developers.meethue.com/develop/get-started-2/) on how to obtain those. You also need to specify which light to turn off. 
+
+The easiets way too know which light too turn off is to go the following url: http://[ip of bridge]/debug/clip.html.
+In the url input field enter the following url 
+
+
+```
+/api/[apikey]
+```
+
+And now find the number of your group that you want to turn off.
+
+## Requirements 
+
+This script needs the following modules:
+- requests
+- PyYAML
+
+```
+pip install requests
+pip install PyYAML
+```
 
 ## Installation
 
